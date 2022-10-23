@@ -1,0 +1,33 @@
+<form #Form="ngForm" (ngSubmit)="Submit_Form()">
+  <h1>Create a Post</h1>
+  <br>
+  <br>
+  <input type="text" #PostTitle="ngModel" name="Post_Title" required
+    minlength="5" maxlength="50" placeholder=" Enter The Post Title"
+    [(ngModel)]="Post_Title">
+  <br>
+  <br>
+  <br>
+  <textarea name="Post_Body" #PostBody="ngModel" required minlength="10"
+    maxlength="100" cols="100" rows="10" placeholder=" Enter The Post Description/Body"
+   [(ngModel)]="Post_Body"></textarea>
+  <br>
+  <br>
+  <button class="btn btn-danger" [disabled]="Form.invalid" type="submit">Submit</button>
+</form>
+
+<!-- pops up error messages regarding the inputs properties==>required,minlength,maxlength. -->
+
+<!-- <div   *ngIf="PostTitle.invalid && PostTitle.dirty">
+  <div *ngIf="PostTitle.errors.required">Please provide a title for your post.</div>
+  <div *ngIf="PostTitle.errors.minlength">The title of the blog must contain at least 5 characters.</div>
+  <div *ngIf="PostTitle.errors.maxlength">The title of the blog must contain at most 50 characters.</div>
+</div>
+
+<div   *ngIf="PostBody.invalid && PostBody.dirty">
+  <div *ngIf="PostBody.errors.required">Please provide a title for your post.</div>
+  <div *ngIf="PostBody.errors.minlength">The title of the blog must contain at least 10 characters.</div>
+  <div *ngIf="PostBody.errors.maxlength">The title of the blog must contain at most 100 characters.</div>
+</div> -->
+
+<!-- Form.dirty means that whether the user have changed the value in the form or not -->

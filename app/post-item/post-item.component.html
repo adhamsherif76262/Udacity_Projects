@@ -1,0 +1,11 @@
+<div>
+    <h1> Post Title: {{post.title}}</h1>
+    <h3>Post ID: {{post.id}}</h3>
+    <pre>Post Description: {{post.body}}</pre>
+    <pre>Post Votes: {{post.votes}}</pre>
+    <button  class="btn btn-primary" (click)="Thums_Up(post)">Thums Up</button>
+    <button  class="btn btn-primary" (click)="Thums_Down(post)">Thums Down</button>
+    <button  class="btn btn-primary" (click)="Hide(post)">Hide Post</button>
+</div>
+<br>
+

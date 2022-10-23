@@ -1,0 +1,24 @@
+<!-- <h1 *ngStyle="{'font-size': Title === 'My First Angular App' ? '48px' : '12px' }">{{ Title }}</h1> -->
+<h1>My First Angular App</h1>
+<h3>{{ Return_Any_String() }}</h3>
+
+<!-- Post==>Iteration Name , Posts ==>Property Name in the Typescript file -->
+<!-- <ul *ngFor="let Post of Posts">
+    <li> Post.id </li>
+    <li> Post.title </li>
+    <li> Post.body </li>
+    <li *ngIf="Post.votes===0"> Post.votes </li>
+  </ul> -->
+
+  <!-- Post==>Iteration Name , Posts ==>Property Name in the Posts Typescript file ,
+  post ==>Property Name in the post-item==> child component Typescript file, Post==>Iteration Name -->
+
+  <!-- Hide_Post ==>Property Name in the post-item==> child component Typescript file,
+  hidepost==>the name of the function in the Posts Typescript file that carries out the filteration proccess,
+  $event==> the emitted event from the post-item child component, In other words the post itself -->
+
+  <!-- <app-post-item *ngFor="let Post of Posts" post ="Post" Hide_Post ="hidepost $event">
+  </app-post-item>-->
+
+  <app-post-item *ngFor="let Post of Posts" [post]="Post" (Hide_Post)="hidepost(Post)"></app-post-item>
+  <app-create-post (addpost)="Add_Post($event)"></app-create-post>

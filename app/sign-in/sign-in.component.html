@@ -1,0 +1,6 @@
+<form (ngSubmit)="On_Submit()">
+  <pre>Currently Signing in as : {{ Username }}</pre>
+  <input type="text" name="Username" placeholder="Enter Your Username" [(ngModel)]="Username">
+  <input type="password" name="Password" placeholder="Enter Your Password" [(ngModel)]="Password">
+  <button type="submit">Sign In</button>
+</form>
